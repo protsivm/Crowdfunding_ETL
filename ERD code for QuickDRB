@@ -1,31 +1,26 @@
 ERD code for QuickDRB
 
 
-# Modify this code to update the DB schema diagram.
-# To reset the sample schema, replace everything with
-# two dots ('..' - without quotes).
-
 campaign
 -
-cf_id	
-contact_id	
-company_name	
-description	
-goal	
-pledged	
-outcome	
-backers_count	
-country	
-currency	
-launched_date	
-end_date	
-category_id	
-subcategory_id
+ 0   cf_id           1000 non-null   int64         
+ 1   contact_id      1000 non-null   int64         
+ 2   company_name    1000 non-null   object        
+ 3   description     1000 non-null   object        
+ 4   goal            1000 non-null   float64       
+ 5   pledged         1000 non-null   float64       
+ 6   outcome         1000 non-null   object        
+ 7   backers_count   1000 non-null   int64         
+ 8   country         1000 non-null   object        
+ 9   currency        1000 non-null   object        
+ 10  launched_date   1000 non-null   datetime64[ns]
+ 11  end_date        1000 non-null   datetime64[ns]
+ 12  category_id     1000 non-null   object        
+ 13  subcategory_id  1000 non-null   object
 
 contacts
 -
-contact_id FK 
-first_name
-last_name
-email
-
+ 0   contact_id  1000 non-null   int64 
+ 1   first_name  1000 non-null   object
+ 2   last_name   1000 non-null   object
+ 3   email       1000 non-null   object
