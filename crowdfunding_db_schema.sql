@@ -31,9 +31,37 @@ CREATE TABLE IF NOT EXISTS "contacts" (
 );
 
 
+CREATE TABLE IF NOT EXISTS "category" (
+    "category_id" varchar   NOT NULL,
+    "category" varchar   NOT NULL,
+    CONSTRAINT "pk_category" PRIMARY KEY (
+        "category_id"
+     )
+);
+
+CREATE TABLE IF NOT EXISTS "subcategory" (
+    "subcategory_id" varchar   NOT NULL,
+    "subcategory" varchar   NOT NULL,
+    CONSTRAINT "pk_subcategory" PRIMARY KEY (
+        "subcategory_id"
+     )
+);
+
 -- test query --
 
 SELECT ca.company_name, ca.outcome, co.last_name, co.first_name
 FROM contacts co
 JOIN campaign ca ON co.contact_id = ca.contact_id
 ORDER BY ca.company_name
+
+SELECT *
+from contacts
+
+SELECT *
+from campaign
+
+SELECT *
+from category
+
+SELECT *
+from subcategory
